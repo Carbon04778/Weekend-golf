@@ -1,26 +1,49 @@
-@import "tailwindcss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --green-dark: #1a472a;
+  --green-mid: #2d6a4f;
+  --green-light: #40916c;
+  --gold: #c9a84c;
+  --gold-light: #e8c96c;
+  --gray: #6b7280;
+  --shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins), sans-serif;
+  background: #f0f4f0;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--green-light);
+}
+
+.stat-card .label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-card .value {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--green-dark);
+  margin-top: 4px;
+}
+
+.stat-card .sub {
+  font-size: 0.8rem;
+  color: var(--gray);
+  margin-top: 2px;
 }
