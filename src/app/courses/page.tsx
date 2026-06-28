@@ -257,6 +257,9 @@ export default function CoursesPage() {
                 <td style={{ padding: '8px' }}>{[c.city, c.state, c.country].filter(Boolean).join(', ') || '-'}</td>
                 <td style={{ padding: '8px' }}>{c.notes ?? '-'}</td>
                 <td style={{ padding: '8px' }}>
+                  <a href={`/courses/${c.id}/holes`} style={{ marginRight: '8px' }}>
+                    Configure Holes
+                  </a>
                   <button onClick={() => handleDelete(c.id)} style={{ padding: '4px 8px' }}>
                     Delete
                   </button>
